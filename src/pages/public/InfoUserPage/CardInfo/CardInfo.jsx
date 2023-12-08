@@ -11,6 +11,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import UpdateAvatar from '~/components/UpdateAvatar/UpdateAvatar'
 import userSlice from '~/redux/userSlice';
+import ViewIamge from '~/components/ViewImage/ViewImage';
 import './CardInfo.scss'
 import { t } from 'i18next';
 import { Button } from '@mui/material';
@@ -19,7 +20,7 @@ export default function CardInfo() {
     const user = useSelector((state) => state.user.current)
     const dispatch = useDispatch();
     const [anchorEl, setAnchorEl] = useState(null);
-
+    const [viewImg, setViewImg] = useState([])
     const handleOpenMenu = (event) => {
         setAnchorEl(event.currentTarget);
     };
@@ -29,9 +30,8 @@ export default function CardInfo() {
     };
 
     const handleViewAvatar = () => {
-
+        setViewImg([user.avatarUrl])
         handleCloseMenu();
-        // Thực hiện hành động xem avatar
     };
 
     const handleChangeAvatar = (e) => {
@@ -127,7 +127,7 @@ export default function CardInfo() {
                 <MenuItem onClick={handleViewAvatar}>View Avatar</MenuItem>
                 <MenuItem onClick={handleChangeAvatar}>Change Avatar</MenuItem>
             </Menu>
-
+            <ViewIamge images={viewImg} setImages={setViewImg}/>
         </div>
     );
 }

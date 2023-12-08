@@ -65,7 +65,7 @@ const ManagerRoom = () => {
             id: '#section3',
             to: 'section3',
             info: 'Chổ ở và phòng',
-            comp: <CountRoomSetting countRoom={dataHomeDetail?.numberOfRooms} />
+            comp: <CountRoomSetting accomCateName={dataHomeDetail?.accomCateName} countRoom={dataHomeDetail?.numberOfRooms} />
         },
         {
             id: '#section4',
@@ -77,7 +77,7 @@ const ManagerRoom = () => {
             id: '#section5',
             to: 'section5',
             info: 'Tiện nghi',
-            comp: <ConvenientSetting convent={dataHomeDetail?.amenities} />
+            comp: <ConvenientSetting convent={dataHomeDetail?.facilityCategoryList} />
         },
         {
             id: '#section6',

@@ -174,7 +174,7 @@ export default function RoomDetail() {
                                                 />
                                             </div>
                                             <div className="count__guest">
-                                                <p>{t('numberCount.countClient')}</p>
+                                                {/* <p>{t('numberCount.countClient')}</p> */}
                                                 <Dropdown
                                                     guests={guests}
                                                     setGuests={setGuests}
@@ -208,64 +208,6 @@ export default function RoomDetail() {
                                             <div className="line" style={{ marginTop: '10px' }}>
                                                 <hr />
                                             </div>
-
-                                            {/* {dataDetailHome?.discounts && dataDetailHome?.discounts.length > 0 && (
-                          <>
-                            <div className="discount-campain">
-                              <div className="discount-campain__title">
-                                <h2 className="title">{t('title.discountCompain')}</h2>
-                                <img src="https://img.icons8.com/emoji/30/null/fire.png" alt="" />
-                              </div>
-                              {dataDetailHome?.discounts?.map((discount, index) => (
-                                <div
-                                  key={index}
-                                  style={{ display: 'flex', justifyContent: 'space-between' }}
-                                >
-                                  <p>{discount.category.name}</p>
-                                  <p>{`${discount.config.percent}%`}</p>
-                                </div>
-                              ))}
-                            </div>
-
-                            <div className="line" style={{ marginTop: '10px' }}>
-                              <hr />
-                            </div>
-                          </>
-                        )} */}
-                                            {/* 
-                        {discount !== 0 && (
-                          <div className="price-total">
-                            <div className="title-price">
-                              <p className="name-surcharge">{t('contentMain.discount')}</p>
-                            </div>
-                            <div className="real-price" style={{ display: 'flex' }}>
-                              <p
-                                className="cost-surcharge"
-                                style={{
-                                  textDecoration: 'line-through',
-                                  marginRight: '10px',
-                                  fontSize: '13px',
-                                }}
-                              >{`${formatPrice(priceNoDiscount)}`}</p>
-                              <p
-                                className="cost-surcharge"
-                                style={{ fontSize: '14px' }}
-                              >{`${discount}%`}</p>
-                            </div>
-                          </div>
-                        )} */}
-                                            {/* 
-                        <div className="price-total">
-                          <div className="title-price">
-                            <p className="name-surcharge">{t('contentMain.totalPrice')}</p>
-                          </div>
-                          <div className="real-price">
-                            <p className="cost-surcharge">
-                              {formatPrice(priceTotal === '' ? '0' : priceTotal)}
-                            </p>
-                          </div>
-                        </div> */}
-
                                             <div className="btn-booking">
                                                 <button
                                                     disabled={disBooking}

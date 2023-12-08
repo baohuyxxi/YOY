@@ -23,7 +23,7 @@ export default function ConfirmClose(props) {
 
     const handleConfirm = () => {
         setOpen(false);
-        navigate('/');
+        navigate('/host');
     };
 
     return (

@@ -206,6 +206,18 @@
                             width: 100%;
                         }
                     }
+                    .start {
+                        input {
+                            border-top-left-radius: 5px;
+                            border: 2px solid var(--divider);
+                        }
+                    }
+                    .end {
+                        input {
+                            border-top-right-radius: 5px;
+                            border: 2px solid var(--divider);
+                        }
+                    }
                 }
 
                 .calendarElement {
@@ -218,20 +230,32 @@
             }
 
             .count__guest {
-                margin-top: 50px;
-
-                p {
-                    padding-left: 30px;
-                    font-size: 1.3rem;
-                    font-weight: bold;
-                }
-
+                margin-top: 37px;
                 .dropdown {
-                    width: auto;
-                    padding: 0;
-                    margin-right: 28px;
-                    margin-left: 28px;
+                    margin: 0 12px;
+                    border: 2px solid;
+                    padding-bottom: 10px;
+                    text-align: center;
+                    border-bottom-right-radius: 5px;
+                    border-bottom-left-radius: 5px;
+                     .dropdown-btn {
+                        svg {
+                        }
+                    }
                 }
+
+                // p {
+                //     padding-left: 30px;
+                //     font-size: 1.3rem;
+                //     font-weight: bold;
+                // }
+
+                // .dropdown {
+                //     width: auto;
+                //     padding: 0;
+                //     margin-right: 28px;
+                //     margin-left: 28px;
+                // }
             }
         }
         .price-total {

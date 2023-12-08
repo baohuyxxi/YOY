@@ -64,9 +64,7 @@ export default function ValuationDiscountSetting(props) {
 
     const onSubmit = (dataPrice) => {
         const newData = {
-            data: {
-                pricePerNight: parseFloat(dataPrice.pricePerNight)
-            },
+            pricePerNight: parseFloat(dataPrice.pricePerNight),
             id: params.idHome
         };
         partnerManageAPI

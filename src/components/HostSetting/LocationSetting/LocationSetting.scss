@@ -1,40 +1,61 @@
-.input-address {
-    padding: 8px 20px;
-    width: 700px;
-    font-size: 16px;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    word-wrap: break-word;
-}
-
-.btn {
-    display: flex;
-    justify-content: space-between;
-    border-top: 1px solid #bdbdbd;
-    padding-top: 15px;
-
-    .btn-close {
-        cursor: pointer;
-        text-decoration: underline;
-        margin: 0;
-        padding: 6px 8px;
-        width: auto;
+.container__locationSetting {
+    font-size: 15px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    p{
+        font-weight: 600;
+    }
+    .MuiAccordionDetails-root{
+        // margin-left: 30px;
+        text-align: -webkit-center;
+        
+    }
+    .input-address {
+        padding: 8px 20px;
+        width: 80%;
+        font-size: 16px;
+        margin-bottom: 20px;
+        word-wrap: break-word;
     }
 
-    .btn-close:hover {
-        background: #e0e0e0;
-    }
+    .btn {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #bdbdbd;
+        padding-top: 15px;
 
-    .btn-save {
-        margin: 0;
-        padding: 6px 15px;
-        background: #4caf50;
-        border-radius: 5px;
-        cursor: pointer;
-        border: none;
-    }
+        .btn-close {
+            cursor: pointer;
+            text-decoration: underline;
+            margin: 0;
+            padding: 6px 8px;
+            width: auto;
+        }
 
-    .btn-save:hover {
-        background: #66bb6a;
+        .btn-close:hover {
+            background: #e0e0e0;
+        }
+
+        .btn-save {
+            margin: 0;
+            padding: 6px 15px;
+            background: #4caf50;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-save:hover {
+            background: #66bb6a;
+        }
+    }
+    .container__address {
+        width: 80%;
+        display: flex;
+        padding-bottom: 20px;
+        .input__address
+        {
+            width: 300px;
+        }
     }
 }

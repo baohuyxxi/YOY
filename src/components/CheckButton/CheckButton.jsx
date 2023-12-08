@@ -22,7 +22,7 @@ const CheckButton = (props) => {
 
     return (
         <div className="check-btn">
-            <div name="yes" className={`btn-no ${checkStatus === false ? 'check-yes' : ''}`} onClick={handleCheckNo}>
+            <div name="yes" className={`btn-no ${checkStatus === false ? 'check-no' : ''}`} onClick={handleCheckNo}>
                 <CloseIcon />
             </div>
             <div name="no" className={`btn-yes ${checkStatus === true ? 'check-yes' : ''}`} onClick={handleCheckYes}>

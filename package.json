@@ -48,6 +48,7 @@
     "react-hook-form": "^7.48.2",
     "react-i18next": "^13.2.2",
     "react-icons": "^4.12.0",
+    "react-image-lightbox": "^5.1.4",
     "react-loading-skeleton": "^3.3.1",
     "react-native": "^0.72.7",
     "react-native-calendar-picker": "^7.1.4",

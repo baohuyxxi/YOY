@@ -53,6 +53,7 @@ const StepperTwo = (props) => {
                             <CountNumberGuest setCountGuest={props.setCountGuest} />
                         </div>
                         {props.dataStep2?.map((room, index) => (
+                            console.log(props.dataStep2),
                             <div key={index}>
                                 <div className="count ">
                                     <p>{room.name}</p>
@@ -60,6 +61,7 @@ const StepperTwo = (props) => {
                                         keyType={room.key}
                                         data={props.dataStep2}
                                         setData={props.setDataStep2}
+                                        number={room.number}
                                     />
                                 </div>
                             </div>

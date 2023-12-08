@@ -4,18 +4,11 @@ import CheckButton from '../CheckButton/CheckButton';
 
 const ConvenientItem = (props) => {
     return (
-        <div className="convenient-item">
+        <div className="container__setting__convenien">
             <div className="title-item">
-                <h1
-                    onClick={() => {
-                      
-                    }}
-                >
-                    {props?.name}
-                </h1>
-                {/* <span>{PopularConvenient.desc}</span> */}
+                <h1> {props?.name} </h1>
             </div>
-            <div className="container">
+            <div className="container__convenienItem">
                 {props.dataConveni?.map((item, index) => (
                     <>
                         <div key={index} className="item">
@@ -25,9 +18,9 @@ const ConvenientItem = (props) => {
                                 data={props.data}
                                 setData={props.setData}
                             />
+                            <img src={item.imageUrl}/>
                             <p>{item.facilityName}</p>
                         </div>
-                        <hr />
                     </>
                 ))}
             </div>

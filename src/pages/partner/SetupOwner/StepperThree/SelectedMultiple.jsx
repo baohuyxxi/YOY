@@ -38,10 +38,11 @@ export default function SelectedMultiple(props) {
     const amenityArrays = useMemo(() => props.dataList.map(() => []), [props.dataList]);
 
     return (
-        <div className="selected-multiple-step3" style={{ width: '100%', padding: '0 40px', marginTop: '75px' }}>
+        <div className="selected-multiple-step3" style={{ width: '100%', padding: '0 40px', marginTop: '100px' }}>
             {props.dataList?.map((listCate, index) => {
                 listCate.infoFacilityList.map((convi, conviIndex) => {
                     const option = { label: convi.facilityName, value: conviIndex };
+                    
 
                     if (!amenityArrays[index].some((person) => person.value === conviIndex)) {
                         amenityArrays[index].push(option);
@@ -51,8 +52,9 @@ export default function SelectedMultiple(props) {
                 });
 
                 return (
-                    <div key={listCate.id}>
-                        <p style={{ fontSize: '16px' }}>{listCate.faciCateName}</p>
+                    <div key={listCate.id} style={{display:'flex'}}>
+                        <p style={{ fontSize: '16px', width:'200px' }}>{listCate.faciCateName}</p>
+                        <div style={{width:'100%'}}>
                         <Select
                             defaultValue={selectedOptions[index]}
                             onChange={(event) => {
@@ -69,7 +71,10 @@ export default function SelectedMultiple(props) {
                             options={amenityArrays[index]}
                             isMulti={true}
                             styles={customStyles}
+                            closeMenuOnSelect={false}
                         />
+                        </div>
+                       
                     </div>
                 );
             })}

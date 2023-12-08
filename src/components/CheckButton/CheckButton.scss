@@ -1,13 +1,14 @@
 .check-btn {
     display: flex;
     padding-top: 5px;
+    align-items: center;
 
     .btn-no {
         display: flex;
         justify-content: center;
         border: 1px solid var(--text-color);
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         align-items: center;
         margin-right: 5px;
@@ -22,8 +23,8 @@
         display: flex;
         justify-content: center;
         border: 1px solid var(--text-color);
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
         align-items: center;
         margin-left: 5px;
@@ -36,6 +37,10 @@
 
     .check-yes {
         background: var(--blue-color);
+        color: white;
+    }
+    .check-no{
+        background: var(--red-color);
         color: white;
     }
 }

@@ -1,0 +1,11 @@
+.dialog__imgs {
+    .container__imgs {
+        text-align: center;
+        .img {
+            width: 65%;
+            margin-bottom: 30px;
+            max-height: 550px;
+            object-fit: cover;
+        }
+    }
+}

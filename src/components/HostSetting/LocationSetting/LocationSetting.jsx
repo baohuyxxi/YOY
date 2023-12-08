@@ -59,7 +59,7 @@ export default function LocationSetting(props) {
     };
 
     return (
-        <div style={{ fontSize: '15px', paddingRight: '50px', paddingBottom: '50px' }}>
+        <div className='container__locationSetting'>
             <h3>Vị trí</h3>
             <form onSubmit={onSubmit}>
                 <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
@@ -68,21 +68,11 @@ export default function LocationSetting(props) {
                         aria-controls="panel1bh-content"
                         id="panel1bh-header"
                     >
-                        <p style={{ width: '33%', flexShrink: 0 }}>Địa chỉ</p>
-                        <p style={{ color: 'text.secondary' }}>{props.locationRoom.addressGeneral}</p>
-                    </AccordionSummary>
-                    <AccordionDetails
-                        expandIcon={<ExpandMoreIcon />}
-                        aria-controls="panel1bh-content"
-                        id="panel1bh-header"
-                        style={{ display: 'flex' }}
-                    >
-                        <p style={{ width: '33%', flexShrink: 0 }}>Địa chỉ chi tiết</p>
+                         <p style={{ width: '33%', flexShrink: 0 }}>Địa chỉ chi tiết</p>
                         <p style={{ color: 'text.secondary' }}>{props.locationRoom.addressDetail}</p>
-                    </AccordionDetails>
+                    </AccordionSummary>
                     <AccordionDetails>
                         <SelectAddress setData={setAddress} data={address}></SelectAddress>
-
                         <input
                             className="input-address"
                             value={addressDetail}

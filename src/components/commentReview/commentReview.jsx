@@ -22,7 +22,7 @@ export default function CommentReview(props) {
     return (
         <>
             {loading ? (
-                <div className="paper container__emtyComment">
+                <div className="container__emtyComment">
                      <p>Chưa có bình luận nào</p>
                     <img src="/src/assets/video/crabtyping.gif" className='emtyComment'></img>
                    

@@ -107,9 +107,9 @@ export default function SelectAddress(props) {
 
     return (
         <>
-            <div className="row">
+            <div className='container__address'>
                 <Autocomplete
-                    className="input"
+                    className="input__address"
                     value={selectedProvince}
                     onChange={handleProvinceChange}
                     options={provinces}
@@ -130,7 +130,7 @@ export default function SelectAddress(props) {
                 />
 
                 <Autocomplete
-                    className="input"
+                    className="input__address"
                     value={selectedDistrict}
                     onChange={handleDistrictChange}
                     options={districts}
@@ -150,7 +150,7 @@ export default function SelectAddress(props) {
                     )}
                 />
                 <Autocomplete
-                    className="input"
+                    className="input__address"
                     value={selectedWard}
                     onChange={(event, newValue) => setSelectedWard(newValue)}
                     options={wards}

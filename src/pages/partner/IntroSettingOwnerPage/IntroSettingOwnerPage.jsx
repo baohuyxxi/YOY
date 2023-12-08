@@ -11,7 +11,7 @@ const IntroSettingOwnerPage = () => {
     const navigate = useNavigate();
 
     const backHome = () => {
-        navigate('/');
+        navigate('/host');
     };
 
     const nextPage = () => {

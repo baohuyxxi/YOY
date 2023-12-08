@@ -13,7 +13,7 @@ const Convenient = (props) => {
             <div key={i}
                 className= {`col l-${12/row}`}>
                  {cutData.map((convi, index) => (
-                        <div className="convenient-item" key={index}>
+                        <div className=".container__setting__convenien" key={index}>
                             <img src={convi.imageUrl} alt="icon-convenient" className="icon-convenient" />
                             <p style={{ textDecorationLine: "none" }}>
                                 {convi.facilityName}

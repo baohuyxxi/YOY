@@ -3,16 +3,17 @@ import { DateRangePicker } from 'react-date-range';
 
 import format from 'date-fns/format';
 import { addDays } from 'date-fns';
-
+import { useDispatch, useSelector } from 'react-redux';
 import 'react-date-range/dist/styles.css';
 import 'react-date-range/dist/theme/default.css';
 
 import './DateGo.scss';
 const DateRangePickerComp = (props) => {
+    const dataBooking = useSelector((state) => state.booking);
     const [range, setRange] = useState([
         {
-            checkIn: new Date(),
-            checkOut: addDays(new Date(), 0),
+            checkIn: dataBooking.checkIn,
+            checkOut:  dataBooking.checkOut,
             key: 'selection'
         }
     ]);
@@ -48,7 +49,7 @@ const DateRangePickerComp = (props) => {
             <div className="info_date">
                 <div className="output start">
                     <input
-                        value={`${range[0]?.startDate ? format(range[0].startDate, 'dd/MM/yyyy') : ''}`}
+                        value={`${range[0]?.checkIn}`}
                         readOnly
                         className="inputBox"
                         onClick={() => setOpen((open) => !open)}
@@ -57,7 +58,7 @@ const DateRangePickerComp = (props) => {
 
                 <div className="output end">
                     <input
-                        value={`${range[0]?.endDate ? format(range[0].endDate, 'dd/MM/yyyy') : ''}`}
+                        value={`${range[0]?.checkOut}`}
                         readOnly
                         className="inputBox"
                         onClick={() => setOpen((open) => !open)}

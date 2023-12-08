@@ -40,6 +40,7 @@ export default function TittleSetting(props) {
         setValue('accomName', props?.infoRoom?.accomName);
         setValue('description', props.infoRoom.description);
         setValue('guide', props.infoRoom.guide);
+        setValue('refundPolicy', props.infoRoom.refundPolicy);
         if (props.infoRoom.refundPolicy === 'BEFORE_ONE_DAY') {
             setValue('refundPolicy', 'Trước 1 ngày');
             setRefundTitle('Trước 1 ngày');
@@ -68,7 +69,7 @@ export default function TittleSetting(props) {
             }
             const newData = {
                 data: {
-                    accomName: data.accomName,
+                    nameAccom: data.accomName,
                     description: data.description,
                     guide: data.guide,
                     refundPolicy: tempRefund,
